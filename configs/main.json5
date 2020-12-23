@@ -1,0 +1,11 @@
+[
+    {
+        name: 'benchmark',
+        __parents__: [
+            'default',
+            'data/stackoverflow',
+        ],
+        __repeat__: 1,
+        eval_file: 'dev',
+    },
+]

@@ -1,0 +1,29 @@
+{
+    data_dir: 'ASIM/data/stackoverflow/',
+    output_dir: 'ASIM/data/stackoverflow/',
+    metric: 'acc',
+    watch_metrics: [],
+
+    model: {
+        alignment: 'identity',
+        enc_layers: 2,
+        blocks: 1,
+        hidden_size: 200,
+    },
+
+    routine: {
+        eval_per_samples: 12800,
+        eval_warmup_samples: 3584000,
+        eval_per_samples_warmup: 512000,
+        min_samples: 5120000,
+        tolerance_samples: 2560000,
+    },
+
+    optim: {
+        lr: 0.0012,
+        min_lr: 6e-5,
+        lr_decay_samples: 256000,
+        batch_size: 128,
+        lr_warmup_samples: 0,
+    },
+}

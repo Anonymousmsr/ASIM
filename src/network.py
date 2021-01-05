@@ -93,8 +93,8 @@ class Network(Module):
         a = self.fusion(a, align_a)
         b = self.fusion(b, align_b)
 
-        a = self.connection(a, res_a, 1)
-        b = self.connection(b, res_b, 1)
+        a = torch.cat([a, res_a], dim=-1)
+        b = torch.cat([b, res_b], dim=-1)
 
         a_enc = self.encoding_2(a, a_length)
         b_enc = self.encoding_2(b, b_length)

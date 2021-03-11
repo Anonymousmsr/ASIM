@@ -25,6 +25,6 @@ python train.py stackoverflow.json5
 To evaluate the model, use `python evaluate.py $model_path $data_file`, here's an example:
 
 ```bash
-python evaluate.py ASIM/data/stackoverflow/benchmark/best.pt data/stackoverflow/dev.txt 
+python evaluate.py ASIM/data/stackoverflow/benchmark/best.pt data/stackoverflow/test.txt 
 ```
 
